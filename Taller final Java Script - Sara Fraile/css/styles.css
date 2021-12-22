@@ -1,0 +1,314 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 2px;
+}
+
+/* Estilos mobile */
+/* Grid mobile */
+.header{
+    grid-area: 1/1/2/5;
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+}
+.galeria{
+    grid-area: 2/1/3/5;
+    background-color: rgb(99, 99, 99);
+    height: 400px;
+}
+.juego{
+    grid-area: 3/1/4/5;
+    height: 400px;
+}
+.calculadora{
+    grid-area: 4/1/5/5;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+}
+.lista{
+    grid-area: 5/1/6/5;
+    background-color: rgb(91, 84, 84);
+    height: 400px;
+}
+.footer{
+    grid-area: 6/1/7/5;
+    background-color: rgb(86, 84, 84);
+    height: 120px;
+}   
+
+/* Estilos para el nav */
+.nav{
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(86, 84, 84);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Estilos para el nav abierto */
+.nav.open{
+    left: 0;
+}
+/* Estilos para las a del nav */
+.nav a{
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-top: 28px;
+    border-bottom: thin solid rgb(245, 245, 245);
+    padding-bottom: 40px;
+}
+/* Estilos para el hover del nav */
+.nav a:hover{
+    color: rgb(172, 172, 172);
+}
+/* Estilos para el menu hamburguesa */
+.menuham{
+    position: fixed;
+    top: 20px;
+    left: 87%;
+    background-color: grey;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+/* Estilos para la imagen del menú */
+.menuham img{
+    width: 50px;
+}
+/* Eliminar border del nav */
+.nav .bordernone{
+    border: none;
+}
+/* Estilos para el header */
+.imgheader{
+    height: 120px;
+    width: 100%;
+}
+/* Estilos para galeria */
+.galeria{
+    justify-self: center;
+}
+/* Estilos para la imagen principal de galeria */
+#galeria{
+    text-align: center;
+    width: 349px;
+    height: 264px;
+}
+/* Estilos para las imagenes de galeria */
+.navgal{
+    width: 351px;
+}
+/* Estilos para la lista de galeria */
+ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 27%;  
+}
+/* Estilos para los li de galeria */
+li img{
+    height: 67px;
+    opacity: 50%;
+}
+/* Estilos para la pseudoclase de los li */
+li img:active{
+    transform: scale(0.8);
+}
+/* Estilos para hover de li */
+li img:hover{
+    opacity: 100%;
+}
+/* Estilos para la foto principal */
+.fotoprinc{
+    width: 349px;
+    border: thin solid black;
+}
+/* Estilos para los textos de la galeria */
+#mitexto{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Estilos para el juego */
+.juego{
+    background-image: url(../img/laberinto.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+/* Estilos para la pelota del juego */
+.pelota{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+/* Estilos para la calculadora */
+.calculadora{
+    display: flex;  
+    justify-content: center;
+}
+/* Estilos para el contenedor de la calculadora */
+.calc{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    margin: 30px;
+    margin-top: 14%;
+    padding-left: 5%;
+    height: 50%;
+    background-color: rgb(186, 186, 186);
+}
+
+/* Estilos para todos los div de la calculadora */
+.calc div{
+    width: 40%;
+    align-self: center;
+    justify-self: center;    
+}
+
+/* Estilos para la lista de regalos */
+.lista{
+    justify-self: center;
+    align-self: center;
+    height: 50%;
+    padding: 32px;
+    background-color: rgb(186, 186, 186);
+}
+/* Estilos para la lista de lista de regalos */
+.listaRegalos{
+    list-style: square;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+}
+/* Estilos para el container de la lista de regalos */
+.container{
+    margin-top: 16%;
+}
+
+/* Estilos para el footer */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20%;
+    padding: 3%;
+}
+/* Estilos para el nombre del footer */
+.nombrecompleto{
+    color: rgb(189, 189, 189);
+    font-size: 20px;
+}
+
+/* Estilos para el segundo titulo del footer */
+.DiseñoWeb{
+    color: rgb(125, 125, 125);
+}
+
+
+/* Estilos tablet */
+/* Grid de tablet */
+@media screen and (min-width: 650px) {
+    .galeria{
+        grid-area: 2/1/3/3;
+        
+    }
+    .juego{
+        grid-area: 2/3/4/5;
+      
+    }
+    .calculadora{
+        grid-area: 4/1/5/3;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        
+    }
+    /* Estilos para la calculadora */
+    .calc{
+        padding: 4%;
+        height: 300px;
+        margin:0;
+        width: 80%;
+    }
+    /* Estilos para los input de calculadora */
+   .calc  input{
+        width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+    /* Esilos para la lista de regalos */
+    .lista{
+        display: flex;
+        align-items: center;
+        grid-area: 4/3/4/5;
+        height: 300px;
+        margin-bottom: 5%;
+        padding:3%;
+    }
+    /* Estilos para el menu hamburguesa */
+    .menuham{
+        left:90%
+    }
+    /* Estilos para el header */
+    .imgheader{
+        width: 880px;
+    }
+    /* Estilos para el footer */
+    .footer{
+        margin:0;
+    }
+}
+
+/* Estilos desktop */
+/* Grid de desktop */
+@media screen and (min-width:900px) {
+    .header{
+        height: 159px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
+    .nav{
+        height: 35px;
+        grid-area: 2/1/3/2;
+        align-self: end;
+        position: static;
+        flex-direction: row;
+        padding-top: 5px;
+    }
+    /* Estilos para las a del nav */
+    .nav a{
+        align-self: center;
+        width: 15%;
+        border: none;
+    }
+    /* Estilos para el menú hamburguesa */
+    .menuham{
+        display: none;
+    }
+    /* Estilos para el header */
+    .imgheader{
+        width: 1520px;
+    }
+    
+}

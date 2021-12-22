@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Taller final Java Script</title>
+</head>
+<body>
+    <main id="main" class="main">
+    <header id="header" class="header">
+        <img src="img/banner.png" alt="" id="imgheader" class="imgheader">
+        <nav class="nav">
+            <a href="#galeria">Galería</a>
+            <a href="#juego">Juego</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#lista" class="bordernone">Lista de regalos</a>
+        </nav>
+        <button class="menuham" id="menuham"><img src="img/ham.svg" alt=""></button>
+    </header>
+    
+    <section  class="galeria">
+        <div class="fotoprinc">
+            <img src="img/g1.jpg" alt="" id="galeria">
+            <p id="mitexto">¿Cómo envolver tus regalos? Forma nº1</p>
+        </div>
+        <nav class="navgal">
+            <ul>
+                <li><a onclick="cargarImg('g1', 0)"> <img src="img/g1.jpg" alt=""></a></li>
+                <li><a onclick="cargarImg('g2', 1)"> <img src="img/g2.jpg" alt=""></a></li>
+                <li><a onclick="cargarImg('g3', 2)"> <img src="img/g3.jpg" alt=""></a></li>
+                <li><a onclick="cargarImg('g4', 3)"> <img src="img/g4.jpg" alt=""></a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="juego" class="juego" >
+        <div id="pelota" class="pelota">
+
+        </div>
+    </section>
+    <section id="calculadora" class="calculadora">
+        
+        <div class="calc">
+            <div class="variables">
+                <label for="variable1">Inserte el valor 1<label>
+                <input type="text" name="variable1" id="num1" maxlength="5">
+                <br> <br>
+                <label for="variable2">Inserte el valor 2<label>
+                <input type="text" name="variable2" id="num2" maxlength= "5">
+            </div>
+            <div class="operadores">
+                <input type="button" name="suma" value="suma+" onclick="suma()">
+                <br><br>
+                <input type="button" name="resta" value="resta-" onclick="resta()">
+                <br><br>
+                <input type="button" name="multiplica" value="multiplica*" onclick="multiplica()">
+                <br><br>
+                <input type="button" name="divide" value="divide/" onclick="division()">
+            </div>
+            <div class="resultado">
+                <label for="result">El resultado es</label>
+                <input type="text" name="result" id="resultado" maxlength="5">
+            </div>
+            </div>
+    </section>
+    <section  class="lista">
+        
+        <div id="container">
+            <form action="#">
+                <label for="add">Lista de regalos</label>
+                <input type="text" name="add" id="add">
+                <input type="button" value="añadir regalo" id="añadirRegalo">
+            </form>
+            <ul id="listaRegalos" class="listaRegalos"></ul>
+        </div>
+    </section>
+    
+    <footer id="footer" class="footer">
+        
+    </footer>
+       
+    </main>
+    
+    <script src="scripts/header.js"></script>
+    <script src="scripts/juego.js"></script>
+    <script src="scripts/calculadora.js"></script>
+    <script src="scripts/galeria.js"></script>
+    <script src="scripts/menuham.js"></script>
+    <script src="scripts/footer.js"></script>
+</body>
+</html>
